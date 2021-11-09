@@ -11,8 +11,65 @@
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 
+    <!-- snowflakes -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+<style>
+  /* customizable snowflake styling */
+  .snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+  }
+
+  @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+  </style>
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+  </div>
+
     <!-- My css -->
     <link rel="stylesheet" href="style.css">
+
     <title>Antan Portofolio</title>
   </head>
 
@@ -47,9 +104,11 @@
     </nav>
     <!-- Akhirnavbar -->
 
+    <h1 class="">An animated element</h1>
+
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-        <img src="img/2021_06_07_23_59_IMG_1059.JPG" class="rounded-circle img-thumbnail" alt="Yunita Sulistyowati" width="200" >
+        <img src="img/2021_06_07_23_59_IMG_1059.JPG" class="rounded-circle img-thumbnail animate__animated animate__bounce " alt="Yunita Sulistyowati" width="200" >
         <h1 class="display-3">Yunita Sulistyowati</h1>
         <p class="lead">
             Passionate with tenis | Work hard like a horse
@@ -178,22 +237,13 @@
         <p>Created With <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/antansobar/" class="text-white fw-bold">Mantharpati</a></p>
     </footer>
     <!-- Akhir footer -->
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script>
-      const scriptURL = '<https://script.google.com/macros/s/AKfycbwVvPizoDk_y6UDeyfK7VnHh5MXBVzhyRNWk50pMujuSR9zHNC27-6_9sXqAZja-vso/exec>'
-      const form = document.forms['contact-form']
-
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
-  </body>
+      </body>
 </html>
 
 
